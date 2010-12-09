@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5</title>
+        <meta name="author" content="Alkesh Vaghmaria" />
+        <meta name="date" content="2010-10-08" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <!-- Slippy core file and dependencies -->
+        <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="jquery.history.js"></script>
+        <script type="text/javascript" src="slippy-0.9.0.js"></script>
+        <!-- Slippy structural styles -->
+        <link type="text/css" rel="stylesheet" href="slippy-0.9.0.css"/>
+        <!-- Slippy theme -->
+        <link type="text/css" rel="stylesheet" href="slippy-pure.css"/>
+
+        <!-- Syntax highlighting core file  -->
+        <script type="text/javascript" src="highlighter/shCore.js"></script>
+        <!-- Syntax highlighting brushes, remove those you don't need -->
+        <script type="text/javascript" src="highlighter/shBrushPlain.js"></script>
+        <script type="text/javascript" src="highlighter/shBrushXml.js"></script>
+        <script type="text/javascript" src="highlighter/shBrushJScript.js"></script>
+        <!-- Syntax highlighting styles-->
+        <link type="text/css" rel="stylesheet" href="highlighter/shCore.css"/>
+        <link type="text/css" rel="stylesheet" href="highlighter/shThemeEclipse.css"/>
+        <style type="text/css">
+            body > * {
+                font-size: 1.2em;
+            }
+
+            span.file {
+                font-size: 0.8em;
+                color: #f00;
+                float: right;
+                margin: -.2em .5em 0 0;
+            }
+
+            .smallcode {
+                font-size: 0.8em;
+            }
+
+            .whatwg_icons {
+              width: 20%;
+            }
+
+            #ws-right, #ws-left {
+              float: left;
+              display: block;
+              padding: 10px;
+            }
+
+            #ws-config-message {
+              padding-top: 20px;
+            }
+
+            li {
+              font-size: 95%;
+            }
+
+            h2 {
+              margin-bottom: 20px;
+            }
+
+            [required] { background-color: lightyellow; }
+            :invalid { background-color: pink; }
+        </style>
+        <!-- Slippy init code -->
+        <script type="text/javascript">
+            $(function() {
+                $(".slide").slippy({
+                });
+                SyntaxHighlighter.defaults['gutter'] = false;
+                SyntaxHighlighter.all();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="slide big">
+
+            <div class="vcenter">
+                <h1>HTML5</h1>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>WHATWG</h2>
+            <p>Web Hypertext Application Technology Working Group</p>
+            <div class="hcenter">
+            <img alt="apple" class="whatwg_icons" src="images/apple_logo.png"/>
+            <img alt="mozilla" class="whatwg_icons" src="images/mozilla.png"/>
+            <img alt="opera" class="whatwg_icons" src="images/opera_browser_logo.png"/>
+            </div>
+        </div>
+
+
+        <div class="slide">
+          <h2>Replaces</h2>
+          <ul>
+            <li>HTML4</li>
+            <li>XHTML1</li>
+            <li>DOM2</li>
+          </ul>
+
+          <p>Since 2006 W3C allowed to publish HTML5 spec</p>
+          <p>Published by <a href="http://www.whatwg.org/specs/web-apps/current-work/">WHATWG</a>, and <a href="http://dev.w3.org/html5/spec">W3C</a>, with the <a href="http://dev.w3.org/html5/html4-differences/">differences</a> documented by the W3C</p>
+        </div>
+
+        <div class="slide">
+            <h2>What is HTML5</h2>
+            <ul>
+              <li>elements
+                <ul>
+                  <li>video</li>
+                  <li>audio</li>
+                  <li>canvas</li>
+                  <li>input</li>
+                </ul>
+              </li>
+              <li>attributes
+                <ul>
+                  <li>async</li>
+                  <li>contenteditable</li>
+                </ul>
+              </li>
+              <li>DOM changes</li>
+              <li>Offline Web</li>
+              <li>Drag and Drop</li>
+              <li>Undo History</li>
+              <li>SVG</li>
+            </ul>
+        </div>
+
+
+        <div class="slide">
+            <h2>Not part of the W3C HTML5 spec</h2>
+            <ul>
+              <li>Canvas 2D Context</li>
+              <li>Microdata</li>
+              <li>Communications
+                <ul>
+                  <li>Cross Document Messaging</li>
+                  <li>Channel Messaging</li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>Not part of HTML5 at all</h2>
+            <ul>
+              <li>Web workers</li>
+              <li>Web storage</li>
+              <li>Web sockets</li>
+              <li>Server sent events</li>
+              <li>Web SQL DB</li>
+              <li>Media type sniffing</li>
+              <li>Web origin</li>
+              <li>Geolocation</li>
+              <li>SVG</li>
+              <li>MathML</li>
+              <li>XMLHTTPRequest</li>
+              <li>CSS</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+          <h2>Deprecated elements (selection)</h2>
+          <ul>
+            <li>applet</li>
+            <li>acronym</li>
+            <li>bgsound</li>
+            <li>dir</li>
+            <li>frame</li>
+            <li>frameset</li>
+            <li>strike</li>
+            <li>blink</li>
+            <li>center</li>
+            <li>font</li>
+            <li>marquee</li>
+            <li>tt</li>
+          </ul>
+
+          <p>Full list available in <a href="http://dev.w3.org/html5/spec/obsolete.html#obsolete">the spec</a>
+        </div>
+
+        <div class="slide">
+          <h2>New semantic elements</h2>
+          <ul>
+           <li>article</li>
+           <li>aside</li>
+           <li>command</li>
+           <li>details</li>
+           <li>figure</li>
+           <li>figcaption</li>
+           <li>footer</li>
+           <li>header</li>
+           <li>hgroup</li>
+           <li>mark</li>
+           <li>meter</li>
+           <li>nav</li>
+           <li>progress</li>
+           <li>ruby</li>
+           <li>section</li>
+           <li>time</li>
+           <li>wbr</li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h2>Video</h2>
+          <pre class="brush: xml">&lt;video id="video" src="movie.webm" autoplay controls/&gt;</pre>
+          <pre class="brush: xml">
+          &lt;video id="video" controls&gt;
+            &lt;source type="video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;" src="movie.webm"/&gt;
+            &lt;source type="video/mp4; codecs=&amp;quot;avc1.42E01E, mp4a.40.2&amp;quot;" src="movie.mp4"/&gt;
+            &lt;source type="video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;" src="movie.ogv"/&gt;
+          &lt;/video&gt;
+          </pre>
+          <pre class="brush: jscript">document.getElementById("video").<b>play</b>();</pre>
+          <video width="390" controls="" id="video" tabindex="0">
+                <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="http://slides.html5rocks.com/src/chrome_japan.webm"/>
+                <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://slides.html5rocks.com/src/chrome_japan.mp4"/>
+                <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="http://slides.html5rocks.com/src/chrome_japan.ogv"/>
+                Your browser does not support the video tag
+          </video>
+          <input type="button" value="play" onclick='document.getElementById("video").play();'/>
+        </div>
+
+        <div class="slide">
+          <h2>Audio</h2>
+          <pre class="brush: xml">&lt;audio id="audio" src="sound.mp3" controls/&gt;</pre>
+          <pre class="brush: xml">
+          &lt;audio id="audio" controls&gt;
+            &lt;source type="audio/mpeg" src="sound.mp3"/&gt;
+            &lt;source type="audio/ogg" src="sound.ogg"/&gt;
+          &lt;/audio&gt;
+          </pre>
+          <pre class="brush: jscript">document.getElementById("audio").muted = false;</pre>
+            <audio controls id="audio">
+              <source type="audio/mpeg" src="http://slides.html5rocks.com/src/rushus-modal_blues.mp3"/>
+              <source type="audio/ogg" src="http://slides.html5rocks.com/src/rushus-modal_blues.ogg"/>
+                Your browser does not support the audio tag
+           </audio>
+        </div>
+
+        <div class="slide">
+          <h2>Canvas</h2>
+          <pre class="brush: xml">
+            &lt;canvas id="canvas" width="838" height="220"&gt;&lt;/canvas&gt;
+            &lt;script&gt;
+              var canvasContext = document.getElementById("canvas").getContext("2d");
+              canvasContext.fillRect(250, 25, 150, 100);
+
+              canvasContext.beginPath();
+              canvasContext.arc(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2);
+              canvasContext.lineWidth = 15;
+              canvasContext.lineCap = 'round';
+              canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+              canvasContext.stroke();
+            &lt;/script&gt;
+          </pre>
+          <canvas id="canvas" width="838" height="220"></canvas>
+          <script>
+            var canvasContext = document.getElementById("canvas").getContext("2d");
+            canvasContext.fillRect(250, 25, 150, 100);
+
+            canvasContext.beginPath();
+            canvasContext.arc(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2);
+            canvasContext.lineWidth = 15;
+            canvasContext.lineCap = 'round';
+            canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+            canvasContext.stroke();
+          </script>
+        </div>
+
+        <div class="slide">
+          <h2>Canvas Demos</h2>
+            <ul>
+            <li><a href="http://slides.html5rocks.com/#slide24">HTML5 Rocks</a></li>
+            <li><a href="http://alteredqualia.com/canvasmol/">CanvasMol</a></li>
+            <li><a href="http://www.somethinghitme.com/projects/jslander/">JsLander</a></li>
+            </ul>
+        </div>
+
+        <div class="slide">
+          <h2>Inputs</h2>
+
+          <pre class="brush: xml">
+          &lt;style&gt;
+            [required] { background-color: lightyellow; }
+            :invalid { background-color: pink; }
+          &lt;/style&gt;
+          </pre>
+
+          <pre class="brush: xml">&lt;input type="text" required /&gt;</pre>
+          <input type="text" required />
+
+          <pre class="brush: xml"> &lt;input type="email" value="some@email.com" /&gt;</pre>
+          <input type="email" value="some@email.com" />
+
+          <pre class="brush: xml"> &lt;input type="date" min="2010-08-14" max="2011-08-14" value="2010-08-14"/&gt; </pre>
+          <input type="date" min="2010-08-14" max="2011-08-14" value="2010-08-14"/>
+
+          <pre class="brush: xml"> &lt;input type="range" min="0" max="50" value="10" /&gt;</pre>
+          <input type="range" min="0" max="50" value="10" />
+        </div>
+
+        <div class="slide">
+          <h2>More Inputs</h2>
+          <pre class="brush: xml"> &lt;input type="search" placeholder="Search..." /&gt; </pre>
+          <input type="search" placeholder="Search..." />
+
+          <pre class="brush: xml">&lt;input type="tel" placeholder="(555) 555-5555" pattern="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$" /&gt;</pre>
+          <input type="tel" placeholder="(555) 555-5555" pattern="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$" />
+
+          <pre class="brush: xml">&lt;input type="color" /&gt;</pre>
+          <input type="color" />
+
+          <pre class="brush: xml">&lt;input type="number" step="1" min="-5" max="10" value="0" /&gt;</pre>
+          <input type="number" step="1" min="-5" max="10" value="0" />
+        </div>
+
+
+        <div class="slide">
+          <h2>Other Elements</h2>
+          <pre class="brush: xml">&lt;meter min="0" max="100" low="40" high="90" optimum="100" value="91"&gt;A+&lt;/meter&gt;</pre>
+          <meter min="0" max="100" low="40" high="90" optimum="100" value="91">A+</meter>
+
+          <pre class="brush: xml">&lt;progress&gt;working...&lt;/progress&gt;</pre>
+          <progress>working...</progress>
+
+          <pre class="brush: xml">&lt;progress value="75" max="100"&gt;3/4 complete&lt;/progress&gt;</pre>
+          <progress value="75" max="100">3/4 complete</progress>
+        </div>
+
+        <div class="slide">
+          <h2>Async</h2>
+          <pre class="brush: xml"> &lt;script async src="siteScript.js" onload="myInit()"&gt;&lt;/script&gt; </pre>
+          <pre class="brush: xml"> &lt;script defer src="siteScript.js" onload="myInit()"&gt;&lt;/script&gt; </pre>
+        </div>
+
+        <div class="slide">
+            <h2>Content Editable</h2>
+<pre class="brush: xml"> &lt;section id="editable" contenteditable="true"&gt;&lt;/section&gt; </pre>
+<section id="editable" contenteditable="true">
+    <h2>Go ahead, edit away!</h2>
+    <p>Here's a typical paragraph element</p>
+    <ol>
+      <li>and now a listjghjkhg</li>
+      <li>with only</li>
+      <li>three items</li>
+    </ol>
+  </section>
+        </div>
+
+
+        <div class="slide">
+          <h2>ARIA</h2>
+          <ul>
+            <li>W3C spec - <a href="http://www.w3.org/WAI/PF/aria/">WAI-ARIA 1.0</a></li>
+            <li><strong>role</strong> and <strong>aria-*</strong> <a href="http://dev.w3.org/html5/markup/aria/aria.html">attributes</a> available in HTML5</li>
+          </ul>
+          <pre class="brush: xml">
+            &lt;ul id="tree1"
+              role="tree"
+              tabindex="0"
+              aria-labelledby="label_1"&gt;
+              &lt;li role="treeitem" tabindex="-1" aria-expanded="true"&gt;Fruits&lt;/li&gt;
+              &lt;li role="group"&gt;
+                &lt;ul&gt;
+                  &lt;li role="treeitem" tabindex="-1"&gt;Oranges&lt;/li&gt;
+                  &lt;li role="treeitem" tabindex="-1"&gt;Pineapples&lt;/li&gt;
+                  ...
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          </pre>
+        </div>
+
+        <div class="slide">
+          <h2>Offline Web</h2>
+          <pre class="brush: xml">
+            &lt;html manifest="cache.manifest"&gt;
+          </pre>
+
+          <pre class="brush: plain">
+CACHE MANIFEST
+
+CACHE:
+/html5/src/refresh.png
+/html5/src/logic.js
+/html5/src/style.css
+/html5/src/background.png
+          </pre>
+
+          Demo: <a href="http://html5demos.com/offlineapp">http://html5demos.com/offlineapp</a>
+        </div>
+
+        <div class="slide">
+          <h2>Drag and Drop</h2>
+          <pre class="brush: xml">
+            &lt;div id="bin"
+              ondragenter="dragEnterHandler(event)"
+              ondragover="dragOverHandler(event)"
+              ondrop="dropHandler(event)"&gt;
+            &lt;/div&gt;
+
+            &lt;ul&gt;
+              &lt;li draggable="true"&gt;&lt;a id="one" href="#"&gt;one&lt;/a&gt;&lt;/li&gt;
+              &lt;li draggable="true"&gt;&lt;a href="#" id="two"&gt;two&lt;/a&gt;&lt;/li&gt;
+              ...
+          </pre>
+          Demo: <a href="http://html5demos.com/drag-anything">http://html5demos.com/drag-anything</a>
+        </div>
+
+        <div class="slide">
+          <h2>Microdata</h2>
+          <pre class="brush: xml">
+            &lt;div itemscope itemtype=&quot;http://example.org/band&quot;&gt;
+             &lt;p&gt;My name is &lt;span itemprop=&quot;name&quot;&gt;Neil&lt;/span&gt;.&lt;/p&gt;
+             &lt;p&gt;My band is called &lt;span itemprop=&quot;band&quot;&gt;Bandy&lt;/span&gt;.&lt;/p&gt;
+             &lt;p&gt;I am &lt;span itemprop=&quot;nationality&quot;&gt;British&lt;/span&gt;.&lt;/p&gt;
+            &lt;/div&gt;
+          </pre>
+
+          <pre class="brush: xml">
+            &lt;dl itemscope
+                itemtype=&quot;http://vocab.example.net/book&quot;
+                itemid=&quot;urn:isbn:0-330-34032-8&quot;
+                itemref=&quot;author_information&quot;&gt;
+             &lt;dt&gt;Title&lt;/dt&gt;
+             &lt;dd itemprop=&quot;title&quot;&gt;The Reality Dysfunction&lt;/dd&gt;
+             &lt;dt&gt;Author&lt;/dt&gt;
+             &lt;dt&gt;Publication date&lt;/dt&gt;
+             &lt;dd&gt;&lt;time itemprop=&quot;pubdate&quot; datetime=&quot;1996-01-26&quot;&gt;26 January 1996&lt;/time&gt;&lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;div id=&quot;author_information&quot; itemprop=&quot;author&quot;&gt;P Hamilton&lt;/div&gt;
+          </pre>
+
+
+          <a href="http://philip.html5.org/demos/microdata/demo.html">http://philip.html5.org/demos/microdata/demo.html</a>
+        </div>
+
+        <div class="slide">
+          <h2>Cross Document Messaging</h2>
+          <h3>Register an event handler for incoming messages from other domains:</h3>
+          <pre class="brush: jscript">
+          window.addEventListener('message', function(e){
+          if (e.origin == 'http://example.com') {
+          // you've verified the domain the message is coming from, now do something
+          }
+          , false);
+          </pre>
+          <h3>Send a message to another domain:</h3>
+          <pre class="brush: jscript">
+          var frame = document.getElementById("someIframe").contentWindow;
+          frame.postMessage("Some message", "http://www.example.com");
+          </pre>
+          <a href="http://html5demos.com/postmessage2">Demo</a>
+        </div>
+
+        <div class="slide">
+          <h2>Channel Messaging</h2>
+          Create channel:
+          <pre class="brush: jscript">
+          var channel = new MessageChannel();
+          </pre>
+          Send channel to remote code:
+          <pre class="brush: jscript">
+          otherWindow.postMessage('hello', 'http://example.com', [channel.port2]);
+          </pre>
+          To send messages:
+          <pre class="brush: jscript">
+          channel.port1.postMessage('hello');
+          </pre>
+          To receive messages:
+          <pre class="brush: jscript">
+            channel.port1.onmessage = handleMessage;
+            function handleMessage(event) {
+              // message is in event.data
+              // ...
+            }
+          </pre>
+        </div>
+
+        <div class="slide">
+          <h2>Web Workers</h2>
+
+          <pre class="brush: jscript">
+            var w = new Worker('/js/cruncher.js');
+            w.postMessage('');
+          </pre>
+          <a href="http://htmlfive.appspot.com/static/tracker1.html">Cool Demo</a>
+        </div>
+
+        <div class="slide">
+          <h2>Web Storage</h2>
+          <pre class="brush: jscript">
+            // use localStorage for persistent storage
+            // use sessionStorage for per tab storage
+            textarea.addEventListener('keyup', function () {
+              window.localStorage.setItem('value', area.value);
+              window.localStorage.setItem('timestamp', (new Date()).getTime());
+            }, false);
+            textarea.value = window.localStorage.getItem('value');
+         </pre>
+          <textarea id="ta" placeholder="Type your text here..."></textarea>
+          <button id="save-ta">Save</button>
+          <script type="text/javascript">
+            (function(){
+
+              try {
+                (window.localStorage.getItem) // will throw in Firefox under some settings
+              } catch(e){
+                return; // quit because dom.storage.enabled is false
+              }
+
+              var area = document.querySelector('#ta');
+              // place content from previous edit
+              if (!area.value) {
+                area.value = window.localStorage.getItem('value');
+              }
+              updateLog(false);
+
+              // your content will be saved locally
+              document.querySelector('#save-ta').addEventListener('click', function () {
+                window.localStorage.setItem('value', area.value);
+                window.localStorage.setItem('timestamp', (new Date()).getTime());
+                updateLog(true);
+              }, false);
+
+              function updateLog(new_save) {
+                var log = document.querySelector("#ta-log");
+                var delta = 0;
+                if (window.localStorage.getItem('value')) {
+                  delta = ((new Date()).getTime() - (new Date()).setTime(window.localStorage.getItem('timestamp'))) / 1000;
+                  if (new_save) {
+                    log.textContent = 'Saved. Content will be available after browser refresh/reopen.';
+                    setTimeout(function() {
+                      log.textContent = '';
+                    }, 3000);
+                  } else {
+                    log.textContent = 'last saved: ' + delta + 's ago';
+                  }
+                }
+              }
+
+            })();
+          </script>
+        </div>
+
+        <div class="slide">
+          <h2>Web Sockets</h2>
+          <pre class="brush: jscript">
+            var socket = new WebSocket('ws://html5rocks.websocket.org/echo');
+            socket.onopen = function(event) {
+              socket.send('Hello, WebSocket');
+            };
+            socket.onmessage = function(event) { alert(event.data); }
+            socket.onclose = function(event) { alert('closed'); }
+          </pre>
+
+          <div id="ws-left">
+            <div id="ws-config-location">
+                  <h4>Location:</h4>
+                  <input type="text" id="wsUri" disabled="">
+                  <br/>
+                  <input type="checkbox" id="wsSecureCb" onclick="wsToggleTls();" disabled="">
+                  <label id="wsSecureCbLabel" for="wsSecureCb" style="color: rgb(153, 153, 153); ">Use secure WebSocket (TLS/SSL)</label>
+                  <br/>
+                  <button id="wsConnectBut" disabled="">Connect</button>
+                  <button id="wsDisconnectBut">Disconnect</button>
+                </div>
+                <div id="ws-config-message">
+                  <h4>Message:</h4>
+                  <input type="text" id="wsMessage" value="Hello, WebSocket">
+                  <button id="wsSendBut">Send</button>
+                </div>
+              </div>
+              <div id="ws-right">
+              <div id="ws-log">
+                <strong>Output:</strong>
+                <div id="wsConsoleLog"><p style="word-wrap: break-word; ">CONNECTED</p><p style="word-wrap: break-word; ">SENT: Hello, WebSocket</p><p style="word-wrap: break-word; "><span style="color: blue;">RESPONSE: Hello, WebSocket</span></p></div>
+                <button id="wsClearLogBut">Clear log</button>
+              </div>
+            </div>
+            <script src="http://slides.html5rocks.com/src/websocket/websocket.js" defer></script>
+        </div>
+
+        <div class="slide">
+          <h2>Server Sent Events</h2>
+          <pre class="brush: jscript">
+          var source = new EventSource('stream.php');
+          </pre>
+          <pre class="brush: jscript">
+          source.addEventListener('message', function(e) {
+            console.log(e.data);
+          }, false);
+          </pre>
+        </div>
+
+        <div class="slide">
+          <h2>Web SQL DB</h2>
+          <pre class="brush: jscript">
+            var db = window.openDatabase("DBName", "1.0", "description", 5*1024*1024); //5MB
+            db.transaction(function(tx) {
+              tx.executeSql("SELECT * FROM test", [], successCallback, errorCallback);
+            });
+          </pre>
+          <div class="center" id="websqldb-example">
+            <input type="text" id="todoitem">
+            <button onclick="webSqlSample.newRecord()">new to do item</button>
+            <button onclick="webSqlSample.createTable()">create table</button>
+            <button onclick="webSqlSample.dropTable()">drop table</button>
+            <ul class="record-list" id="db-results"></ul>
+            <div id="db-log"></div>
+          </div>
+          <script defer>
+            var webSqlSample = (function() {
+              var db;
+              var log = document.getElementById('db-log');
+              if (window.openDatabase) {
+                db = openDatabase("DBTest", "1.0", "HTML5 Database API example", 200000);
+                showRecords();
+              }
+              document.getElementById('db-results').addEventListener('click', function(e) { e.preventDefault(); }, false);
+
+              function onError(tx, error) {
+                log.innerHTML = '<p class="error">Error: ' + error.message + '</p>';
+              }
+
+              // select all records and display them
+              function showRecords() {
+                document.getElementById('db-results').innerHTML = '';
+                db.transaction(function(tx) {
+                  tx.executeSql("SELECT * FROM Table1Test", [], function(tx, result) {
+                    for (var i = 0, item = null; i < result.rows.length; i++) {
+                      item = result.rows.item(i);
+                      document.getElementById('db-results').innerHTML +=
+                          '<li><span contenteditable="true" onkeyup="webSqlSample.updateRecord('+item['id']+', this)">'+
+                          item['text'] + '</span> <a href="#" onclick="webSqlSample.deleteRecord('+item['id']+')">[Delete]</a></li>';
+                    }
+                  });
+                });
+              }
+
+              function createTable() {
+                db.transaction(function(tx) {
+                  tx.executeSql("CREATE TABLE Table1Test (id REAL UNIQUE, text TEXT)", [],
+                      function(tx) {  log.innerHTML = '<p>"Table1Test" created!</p>' },
+                      onError);
+                });
+              }
+
+              // add record with random values
+              function newRecord() {
+                var num = Math.round(Math.random() * 10000); // random data
+                db.transaction(function(tx) {
+                  tx.executeSql("INSERT INTO Table1Test (id, text) VALUES (?, ?)", [num, document.querySelector('#todoitem').value],
+                      function(tx, result) {
+                        log.innerHTML = '';
+                        showRecords();
+                      },
+                      onError);
+                });
+              }
+
+              function updateRecord(id, textEl) {
+                db.transaction(function(tx) {
+                  tx.executeSql("UPDATE Table1Test SET text = ? WHERE id = ?", [textEl.innerHTML, id], null, onError);
+                });
+              }
+
+              function deleteRecord(id) {
+                db.transaction(function(tx) {
+                  tx.executeSql("DELETE FROM Table1Test WHERE id=?", [id],
+                      function(tx, result) { showRecords() },
+                      onError);
+                });
+              }
+
+              // delete table from db
+              function dropTable() {
+                db.transaction(function(tx) {
+                  tx.executeSql("DROP TABLE Table1Test", [],
+                      function(tx) { showRecords() },
+                      onError);
+                });
+              }
+
+              return {
+                newRecord: newRecord,
+                createTable: createTable,
+                updateRecord: updateRecord,
+                deleteRecord: deleteRecord,
+                dropTable: dropTable
+              }
+            })();
+          </script>
+        </div>
+
+        <div class="slide">
+          <h2>Geolocation</h2>
+          <a href="http://html5demos.com/geo">Demo</a>
+        </div>
+
+        <div class="slide">
+          <h2>SVG</h2>
+          <pre class="brush: xml">
+            &lt;svg&gt;
+              &lt;style type=&quot;text/css&quot;&gt;
+                polygon:hover {stroke:red; stroke-width:10; fill-opacity:0.4;}
+              &lt;/style&gt;
+              &lt;polygon fill=&quot;red&quot; stroke-width=&quot;10&quot; fill-opacity=&quot;0.4&quot;
+                      transform=&quot;translate(-50,-100) rotate(15)&quot;
+                      points=&quot;350, 75 379,161 469,161 397,215
+            ...
+            &lt;/svg&gt;
+          </pre>
+          <svg>
+            <style type="text/css">
+              polygon:hover {stroke:red; stroke-width:10; fill-opacity:0.4;}
+            </style>
+            <polygon fill="red" stroke-width="10" fill-opacity="0.4"
+                     points="350, 75 379,161 469,161 397,215
+                             423,301 350,250 277,301 303,215
+                             231,161 321,161"
+                     transform="translate(-50,-100) rotate(15)" />
+            <polygon fill="lime" stroke-width="10"
+                     points="850,75  958,137.5 958,262.5
+                             850,325 742,262.6 742,137.5"
+                     transform="translate(-500,-50)" />
+          </svg>
+        </div>
+
+        <div class="slide">
+          <h2>MathML</h2>
+          <a href="http://webkit.org/demos/mathml/MathMLDemo.xhtml">Demo</a>
+        </div>
+
+        <div class="slide">
+          <h2>Validator</h2>
+          <a href="http://html5.validator.nu/">here</a>
+        </div>
+
+        <div class="slide">
+          <h2>In Practice</h2>
+          <ul>
+            <li><a href="http://www.modernizr.com/">Modernizer</a></li>
+            <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h2>Tutorials</h2>
+          <ul>
+            <li><a href="http://diveintohtml5.org/">Dive into HTML5</a></li>
+            <li><a href="http://www.w3schools.com/html5/default.asp">W3Schools</a></li>
+        </div>
+
+        <div class="slide">
+          <h2>Demos</h2>
+          <ul>
+            <li><a href="http://www.html5rocks.com/">html5rocks.com</a></li>
+            <li><a href="http://html5demos.com/">html5demos.com</a></li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h2>Browser compatibility</h2>
+          <a href="http://html5test.com/">html5test.com</a>
+        </div>
+
+        <div class="slide">
+          <h2>This Presentation</h2>
+          Produced using <a href="https://github.com/Seldaek/slippy">slippy</a>
+        </div>
+
+        <div class="slide">
+          <div class="vcenter" style="text-align: center;">The End</div>
+        </div>
+
+        <div class="layout" id="default">
+        </div>
+
+        <div class="footer">
+          <span class="left">HTML5</span>
+          <span class="right">Alkesh Vaghmaria</span>
+          <hr class="defloat" />
+        </div>
+  </body>
+</html>
